@@ -1,0 +1,32 @@
+- Starting Point
+	- Missing values
+	- Outliers
+	- Temporal feature (changes in time)
+	- Categorical features (Encoding)
+	- Feature selection 
+
+- EDA
+    - pd.pandas.set_option('display.max_columns',None) [SHOW ALL COLUMNS]
+    - shape
+    - info()
+    - describe()
+	- value_counts()
+	- isnull()
+	- isna()
+	- duplicated() , drop_duplicates()
+	- Correlation (sns.heatmap(df.corr()))
+	- NUMERICAL FEATURES:
+		- discrete vs continuous
+        - find distribution of continuous numerical features, if skewed then transform
+        - find distribution - data[feature].hist(bins=20)
+		- when solving regression problem, convert features to gaussian distribution - np.log(data[feature])
+		- jointplot (relationship between two numerical features) - scatter/hex/reg
+		- pairplot (relationship between multiple features) 
+		- distplot (distribution of numerical feature) - kde=True/False, Percentage/Count - use to count as well (bins)
+		- hue = split based on a categorical feature (eg: sex)
+	- CATEGORICAL FEATURES:
+        - cardinality (how many categories/values does each feature have)
+		- countplot 
+		- barplot (relationship between categorical(x)[sex], numeric(y)[total_bill], hue(smoker)) 
+		- boxplot (min,25,median,75,max,outliers of categorical(x)[sex] wrt numeric(y)[total_bill], hue(smoker))
+		- violinplot (boxplot + distribution(KDE) of the data : x=total_bill , y=sex) 
